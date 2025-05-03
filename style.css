@@ -1,0 +1,263 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #495057;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden; /* Per evitare scroll orizzontale indesiderato */
+}
+
+header {
+    background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%); /* Sfumatura gialla */
+    color: #333; /* Testo nero per contrasto con il giallo */
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 10; /* Assicura che l'header sia sopra altri elementi */
+}
+
+nav a {
+    color: #343a40;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 700; /* Rende il testo più grassetto */
+    font-size: 1.2em; /* Aumenta leggermente la dimensione del testo */
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Aggiunge transizione per l'ombra */
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px; /* Aggiunge un po' di spazio interno al pulsante */
+    border-radius: 8px; /* Arrotonda leggermente i bordi */
+    background-color: #f8f9fa; /* Aggiunge un leggero sfondo ai pulsanti */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra ai pulsanti */
+}
+
+nav a svg {
+    margin-right: 8px;
+    width: 22px; /* Rende l'icona leggermente più grande */
+    height: 22px;
+    stroke-width: 1.5;
+    stroke: #343a40;
+}
+
+nav a:hover {
+    color: #ffc107;
+    transform: scale(1.08); /* Aumenta leggermente la dimensione al passaggio del mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra al passaggio del mouse */
+    background-color: #fff; /* Cambia leggermente lo sfondo all'hover */
+}
+
+nav {
+    background: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky; /* Mantiene la navigazione in alto durante lo scroll */
+    top: 0;
+    z-index: 9;
+    border-bottom: 1px solid #e0e0e0; /* Aggiunge un bordo inferiore per separare meglio la navigazione */
+}
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeUp 0.6s ease-out forwards; /* Aggiunge un'animazione all'apparizione */
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    padding: 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    color: #333; /* Titolo nero */
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.intro .subtitle {
+    color: #6c757d;
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.intro .illustration {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.guide {
+    text-align: center; /* Centra il contenuto della sezione */
+    padding: 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.guide h2 {
+    color: #333;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.guide p {
+    margin-bottom: 20px; /* Aggiunge un po' di spazio sotto il paragrafo */
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    background: #ffc107; /* Sfondo giallo */
+    color: #333; /* Scritta nera */
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-button svg {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+    stroke: #333; /* Icona nera */
+}
+
+.download-button:hover {
+    background: #e0a800; /* Giallo più scuro all'hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.feedback-section {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.feedback .form-group {
+    margin-bottom: 20px;
+}
+
+.feedback label {
+    display: block;
+    margin-bottom: 8px;
+    color: #343a40;
+    font-weight: 500;
+}
+
+.feedback input[type="text"],
+.feedback input[type="email"],
+.feedback textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.feedback input[type="text"]:focus,
+.feedback input[type="email"]:focus,
+.feedback textarea:focus {
+    outline: none;
+    border-color: #0275d8;
+    box-shadow: 0 0 0 0.2rem rgba(2, 117, 216, 0.25);
+}
+
+.feedback textarea {
+    min-height: 120px;
+}
+
+.feedback .submit-button {
+    background: #ffc107; /* Pulsante giallo */
+    color: #333; /* Testo nero per contrasto */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+}
+
+.feedback .submit-button svg {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+    stroke: #333; /* Icona nera */
+}
+
+.feedback .submit-button:hover {
+    background: #e0a800; /* Giallo più scuro all'hover */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.success-message {
+    display: none;
+    color: #28a745;
+    margin-top: 15px;
+    font-weight: bold;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
